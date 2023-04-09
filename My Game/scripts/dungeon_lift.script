@@ -1,0 +1,7 @@
+play_sound("gate");
+if self.coord.z == 0 then
+  move_platform(self, "Waypoint 2");
+else
+  move_platform(self, "Waypoint 1");
+end;
+

@@ -1,0 +1,24 @@
+play_sound("door");
+// Store relevant tiles into local variables using their entity IDs
+$outside_tile = entity["door_outside"];
+$inside1_tile = entity["door_inside1"];
+$inside2_tile = entity["door_inside2"];
+// Check "state" property to determine whether to open or close the door
+// The initial value for this property is defined in the door's custom properties in the Map Editor
+if self.property["state"] == "closed" then
+  play_animation(self, "open");
+  // Allow the player to walk through the doorway
+  modify_navigation($outside_tile, $inside1_tile, WALK_AND_INTERACT);
+  // Prevent the player from walking between the "door_inside2" tile and the door's tile
+  modify_navigation($inside1_tile, $inside2_tile, INTERACT_ONLY);
+  // Update the "state" property to keep track of its open/closed state
+  self.property["state"] = "open";
+else
+  play_animation(self, "close");
+  // Prevent the player from walking through the door
+  modify_navigation($outside_tile, $inside1_tile, INTERACT_ONLY);
+  // Allow the player to walk between the "door_inside2" tile and the door's tile
+  modify_navigation($inside1_tile, $inside2_tile, WALK_AND_INTERACT);
+  // Update the "state" property to keep track of its open/closed state
+  self.property["state"] = "closed";
+end;

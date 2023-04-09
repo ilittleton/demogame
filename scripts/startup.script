@@ -1,0 +1,1 @@
+load_map("room_01", coord[-2, -1, 0]);

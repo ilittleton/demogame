@@ -1,0 +1,2 @@
+heal_entity(initiator, 5);
+play_sound("potion");

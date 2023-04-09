@@ -1,0 +1,12 @@
+set_entity_script(self, "");
+set_player_movement_locked(true);
+play_sound("lever");
+play_animation(self, "switch_on");
+wait(0.5);
+lock_camera();
+move_camera_over_time("Lift", 1.5);
+play_sound("gate");
+move_platform("lift", "Waypoint 1", true);
+wait(0.5);
+reset_camera_over_time(1.5);
+set_player_movement_locked(false);

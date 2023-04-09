@@ -1,0 +1,7 @@
+set_entity_script(self, "");
+play_sound("break");
+play_animation(self, "break");
+give_item("ITEM_0005");
+wait(0.8);
+play_sound("acquire");
+

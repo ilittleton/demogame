@@ -1,0 +1,2 @@
+override_animation(self, "default", "default_player");
+display_message("To disembark from the ship, hold down the Ctrl key and click on an adjacent land tile or hold down the Ctrl key and press an arrow key in the direction of an adjacent land tile.");

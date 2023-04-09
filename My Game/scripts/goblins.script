@@ -1,0 +1,8 @@
+$goblin1 = entity["goblin1"];
+$goblin2 = entity["goblin2"];
+set_dialogue($goblin1, "");
+set_dialogue($goblin2, "");
+move_character($goblin1, "goblin1_target");
+rotate_entity_towards($goblin1, $goblin2, false, 0.25);
+move_character($goblin2, "goblin2_target");
+rotate_entity_towards($goblin2, $goblin1, false, 0.25)

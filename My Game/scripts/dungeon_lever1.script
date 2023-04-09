@@ -1,0 +1,18 @@
+set_entity_script(self, "");
+set_player_movement_locked(true);
+put_entity("bat", "bat_target");
+play_sound("lever");
+play_animation(self, "switch_on");
+wait(0.5);
+lock_camera();
+move_camera_over_time("Gate", 1.5);
+play_sound("gate");
+play_animation(entity["gate"], "open");
+show_group("dungeon_room1");
+set_global_property("dungeon_room1_visible", true);
+wait(1);
+replace_navigation(entity["gate"], INTERACT_ONLY, WALK_AND_INTERACT);
+wait(0.2);
+reset_camera_over_time(1.5);
+set_entity_script(entity["gate"], "");
+set_player_movement_locked(false)

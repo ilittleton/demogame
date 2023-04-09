@@ -1,0 +1,8 @@
+play_sound("chest");
+play_animation(self, "close");
+if player.inventory contains "ITEM_0003" and global.property["coins_taken"] != true then
+  global.property["coins_taken"] = true;
+  start_dialogue("goblins2");
+  entity["goblin1"].behavior = "Goblin Guard (Hostile)";
+  entity["goblin2"].behavior = "Goblin Guard (Hostile)";
+end;

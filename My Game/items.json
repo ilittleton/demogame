@@ -1,0 +1,57 @@
+{
+  "items": [
+    {
+      "id": "ITEM_0003",
+      "name": "Gold Coins",
+      "description": "A small pile of shiny gold coins.",
+      "tags": [],
+      "stackable": false,
+      "image": "gold_coins.png",
+      "usable": false
+    },
+    {
+      "id": "ITEM_0004",
+      "name": "Iron Sword",
+      "description": "A basic iron sword.",
+      "tags": ["weapon"],
+      "stackable": false,
+      "equippable": true,
+      "effects": [{"amount":1,"stat":"attack","type":"stat_boost"}],
+      "object": "sword",
+      "image": "sword.png",
+      "usable": false
+    },
+    {
+      "id": "ITEM_0002",
+      "name": "Mysterious Book",
+      "description": "The book is strangely heavy for its size.",
+      "tags": [],
+      "stackable": false,
+      "image": "book.png",
+      "usable": false
+    },
+    {
+      "id": "ITEM_0001",
+      "name": "Titanium Hammer",
+      "description": "Great for smashing things to bits.",
+      "tags": [],
+      "stackable": false,
+      "tool_item": true,
+      "tool_item_range": 1,
+      "image": "hammer.png",
+      "usable": false
+    },
+    {
+      "id": "ITEM_0005",
+      "name": "Health Potion",
+      "description": "Heals 5 HP.",
+      "tags": [],
+      "stackable": false,
+      "image": "health_potion.png",
+      "usable": true,
+      "num_of_uses": 1,
+      "script": "health_potion"
+    }
+  ],
+  "localized": false
+}

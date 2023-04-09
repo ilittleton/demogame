@@ -1,0 +1,2 @@
+load_map("overworld", coord[2, 1, 0], SOUTH);
+display_message("Welcome to the RPG in a Box example game!");

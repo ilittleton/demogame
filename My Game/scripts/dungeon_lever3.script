@@ -1,0 +1,13 @@
+set_entity_script(self, "");
+set_player_movement_locked(true);
+play_sound("lever");
+play_animation(self, "switch_on");
+wait(0.75);
+lock_camera();
+move_camera("Chest");
+wait(0.5);
+play_sound("gate");
+move_platform("chest_platform", "Lowered", true);
+wait(0.75);
+reset_camera();
+set_player_movement_locked(false);

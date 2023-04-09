@@ -1,0 +1,2 @@
+play_sound("chest");
+play_animation(self, "close");

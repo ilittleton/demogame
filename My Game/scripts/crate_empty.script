@@ -1,0 +1,4 @@
+set_entity_script(self, "");
+play_sound("break");
+play_animation(self, "break");
+display_message("There's nothing inside.")

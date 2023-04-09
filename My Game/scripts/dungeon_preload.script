@@ -1,0 +1,7 @@
+if global.property["dungeon_room1_visible"] == false then
+  hide_group("dungeon_room1")
+end;
+if global.property["dungeon_room2_visible"] == false then
+  hide_group("dungeon_room2")
+end
+
